@@ -6,15 +6,24 @@ function OneRMCalculator() {
   const [result, setResult] = useState('')
 
   const handleCalculate = () => {
-    // Placeholder for calculation logic to be implemented later
-    setResult('Calculation will be implemented here')
+    // Calculate one-rep max using the formula: oneRM = weightLifted * (1 + (repsAchieved / 30))
+    const weight = parseFloat(weightLifted)
+    const reps = parseFloat(repsAchieved)
+
+    if (isNaN(weight) || isNaN(reps) || weight <= 0 || reps <= 0) {
+      setResult('Please enter valid positive numbers')
+      return
+    }
+
+    const oneRM = weight * (1 + (reps / 30))
+    setResult(oneRM.toFixed(2))
   }
 
   return (
     <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <h1 className="text-center mb-4">APRE Method Calculator</h1>
+      <div className="row">
+        <div className="col-md-8 col-lg-6">
+          <h1 className="mb-4">1RM Calculator</h1>
 
           <div className="card">
             <div className="card-body">
