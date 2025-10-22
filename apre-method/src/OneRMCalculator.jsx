@@ -38,7 +38,7 @@ function OneRMCalculator() {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="row">
         <div className="col-md-8 col-lg-6">
           <h1 className="mb-4">Max Calculator</h1>
