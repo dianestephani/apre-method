@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BasicProtocolTable from './BasicProtocolTable'
 
 function OneRMCalculator() {
   const [weightLifted, setWeightLifted] = useState('')
@@ -46,15 +47,8 @@ function OneRMCalculator() {
           <p className="mb-4">
             The APRE method uses 3 protocols, allowing you to choose the method that's most appropriate for your client's goal. This section calculates your max repetitions in each category to serve as your starting point.
           </p>
-            
-          <p>
-            APRE 3: Strength/Power<br />
-            APRE 6: Strength/Hypertrophy<br />
-            APRE 10: Hypertrophy
-            
-          </p>
-            
-        
+
+          <BasicProtocolTable />
 
           <div className="card">
             <div className="card-body">
