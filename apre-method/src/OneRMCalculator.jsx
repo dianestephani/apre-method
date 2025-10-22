@@ -43,6 +43,19 @@ function OneRMCalculator() {
         <div className="col-md-8 col-lg-6">
           <h1 className="mb-4">Max Calculator</h1>
 
+          <p className="mb-4">
+            The APRE method uses 3 protocols, allowing you to choose the method that's most appropriate for your client's goal. This section calculates your max repetitions in each category to serve as your starting point.
+          </p>
+            
+          <p>
+            APRE 3: Strength/Power<br />
+            APRE 6: Strength/Hypertrophy<br />
+            APRE 10: Hypertrophy
+            
+          </p>
+            
+        
+
           <div className="card">
             <div className="card-body">
               <form onSubmit={(e) => e.preventDefault()}>

@@ -1,6 +1,7 @@
 import './App.css'
 import OneRMCalculator from './OneRMCalculator'
 import ApreAdjustmentCalc from './ApreAdjustmentCalc'
+import ApreRoutinesTable from './ApreRoutinesTable'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       margin: '0 auto'
     }}>
       <OneRMCalculator />
+      <ApreRoutinesTable />
       <ApreAdjustmentCalc />
     </div>
   )
