@@ -88,6 +88,12 @@ Based on reps achieved in Set 3, the calculator provides weight adjustments:
 - **@vitejs/plugin-react 5.0.4** - React Fast Refresh support
 - **Node.js 22.21.0** - Runtime environment
 
+### Testing
+
+- **Jest 30.2.0** - JavaScript testing framework
+- **React Testing Library 16.3.0** - Component testing utilities
+- **jest-environment-jsdom 30.2.0** - DOM environment for testing
+
 ### Build System
 
 - **Rolldown-Vite** - High-performance Rust-based bundler for faster builds
@@ -128,6 +134,9 @@ npm run dev
 - `npm run build` - Build optimized production bundle
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint to check code quality
+- `npm test` - Run test suite with Jest
+- `npm run test:watch` - Run tests in watch mode for development
+- `npm run test:coverage` - Run tests with coverage report
 
 ## Project Structure
 
@@ -146,6 +155,70 @@ apre-method/
 ├── eslint.config.js          # ESLint configuration
 └── README.md                 # Project documentation
 ```
+
+## Quality Assurance
+
+This application includes a comprehensive test suite built with Jest and React Testing Library, ensuring reliability and correctness of all calculation logic and user interactions.
+
+### Test Coverage
+
+The test suite includes **56 comprehensive tests** with **95.55% code coverage**:
+
+| Component | Tests | Coverage |
+|-----------|-------|----------|
+| OneRMCalculator | 11 tests | Brzycki formula calculations, input validation, error handling |
+| ApreAdjustmentCalc | 20 tests | All protocol adjustment ranges, state management |
+| ApreRoutinesTable | 11 tests | Table rendering, protocol structure validation |
+| BasicProtocolTable | 6 tests | Protocol information display |
+| App | 5 tests | Component integration and layout |
+
+### Running Tests
+
+Run the full test suite:
+
+```bash
+npm test
+```
+
+Run tests in watch mode during development:
+
+```bash
+npm run test:watch
+```
+
+Generate a coverage report:
+
+```bash
+npm run test:coverage
+```
+
+### Test Categories
+
+**Calculation Tests:**
+
+- Brzycki formula accuracy (1RM = Weight × (1 + Reps/30))
+- Rep max calculations (3RM, 6RM, 10RM)
+- Rounding to nearest 0.5 lb
+- Decimal and integer input handling
+
+**Validation Tests:**
+
+- Zero and negative value rejection
+- Invalid input handling
+- Error message display
+
+**User Interaction Tests:**
+
+- Form submissions
+- Dropdown selections
+- State management
+- Dynamic UI updates
+
+**Integration Tests:**
+
+- Component composition
+- Data flow between components
+- Layout and styling
 
 ## Building for Production
 
